@@ -1,0 +1,398 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
+
+\usepackage{helvet} %ARIAL
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{cancel}
+ \usepackage{lscape}
+ \usepackage{mathtools}
+ \usepackage{mathrsfs}
+
+\begin{document}
+	\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyhead{}
+	\fancyfoot{}
+	
+%	\begin{landscape}
+%		\begin{flushleft}	
+%			CUERPO EA\\\vspace{0.2cm}
+%			$\sum F_{x}$\\\vspace{0.2cm}
+%			$E_{x}+A_{x}=2\cdot masa_{EA} \cdot a_{X}$\\\vspace{0.2cm}
+%			$\sum F_{y}$\\\vspace{0.2cm}
+%			$	E_{y}+A_{y}-P_{eso~AE}=2\cdot masa_{EA
+%			} \cdot a_{y}$ \\\vspace{0.2cm}
+%			$\sum M_{E }=\sum M_{E}efectivos$\\\vspace{0.2cm}
+%			$-100 Cos(45) \cdot P_{eso~AE}-200Sen(45)\cdot A_{x}+200 Cos(45)\cdot A_{y} = 2I_{nercia~respecto~E} \cdot \alpha$\\\vspace{0.8cm}
+%			
+%			CUERPO OB\\\vspace{0.2cm}
+%			$\sum F_{x}$\\\vspace{0.2cm}
+%			$O_{x}+B_{x}=2\cdot masa_{OB} \cdot a_{X}$\\\vspace{0.2cm}
+%			$\sum F_{y}$\\\vspace{0.2cm}
+%			$	O_{y}+B_{y}-P_{eso~OB}=2\cdot masa_{OB
+%			} \cdot a_{y}$ \\\vspace{0.2cm}
+%			$\sum M_{o }=\sum M_{o}efectivos$\\\vspace{0.2cm}
+%			$-Mo-100 Cos(30) \cdot P_{eso~OB}-200Sen(30)\cdot B_{x}+200 Cos(45)\cdot B_{y} = 2I_{nercia~respecto~O} \cdot \alpha$\\\vspace{0.8cm}
+%			
+%			CUERPO ABP\\\vspace{0.2cm}
+%			$\sum F_{x}$\\\vspace{0.2cm}
+%			$-A_{x}-B_{x}=masa_{ABP} \cdot a_{X}$\\\vspace{0.2cm}
+%			$\sum F_{y}$\\\vspace{0.2cm}
+%			$	-A_{y}-B_{y}-P_{eso~ABP}= masa_{ABP
+%			} \cdot a_{y}$ \\\vspace{0.2cm}
+%			$\sum M_{B }=\sum M_{B}efectivos$\\\vspace{0.2cm}
+%			$-150.07\cdot P_{eso~ABP} +150 Cos(28) \cdot A_{y} + 150Sen(28)\cdot A_{x} = I_{nercia~respecto~B} \cdot \alpha + masa_{ABP} \cdot a_{X} \cdot 3.97 + masa_{ABP} \cdot a_{Y} \cdot 150.07$\\\vspace{0.8cm}
+%			
+%			\newpage
+%			2 	CUERPO EA\\\vspace{0.2cm}
+%			$\sum F_{x}$\\\vspace{0.2cm}
+%			$E_{x}+A_{x}=2\cdot masa_{EA} \cdot a_{X}$\\\vspace{0.2cm}
+%			$\sum F_{y}$\\\vspace{0.2cm}
+%			$	E_{y}+A_{y}-P_{eso~AE}=2\cdot masa_{EA
+%			} \cdot a_{y}$ \\\vspace{0.2cm}
+%			$\sum M_{E }=\sum M_{E}efectivos$\\\vspace{0.2cm}
+%			$-100 Cos(20) \cdot P_{eso~AE}-200Sen(20)\cdot A_{x}+200 Cos(20)\cdot A_{y} = 2I_{nercia~respecto~E} \cdot \alpha$\\\vspace{0.8cm}
+%			
+%			CUERPO OB\\\vspace{0.2cm}
+%			$\sum F_{x}$\\\vspace{0.2cm}
+%			$O_{x}+B_{x}=2\cdot masa_{OB} \cdot a_{X}$\\\vspace{0.2cm}
+%			$\sum F_{y}$\\\vspace{0.2cm}
+%			$	O_{y}+B_{y}-P_{eso~OB}=2\cdot masa_{OB
+%			} \cdot a_{y}$ \\\vspace{0.2cm}
+%			$\sum M_{o }=\sum M_{o}efectivos$\\\vspace{0.2cm}
+%			$-Mo-100 Cos(30) \cdot P_{eso~OB}+200\cdot B_{y} = 2I_{nercia~respecto~O} \cdot \alpha$\\\vspace{0.8cm}
+%			
+%			CUERPO ABP\\\vspace{0.2cm}
+%			$\sum F_{x}$\\\vspace{0.2cm}
+%			$-A_{x}-B_{x}=masa_{ABP} \cdot a_{X}$\\\vspace{0.2cm}
+%			$\sum F_{y}$\\\vspace{0.2cm}
+%			$	-A_{y}-B_{y}-P_{eso~ABP}= masa_{ABP
+%			} \cdot a_{y}$ \\\vspace{0.2cm}
+%			$\sum M_{B }=\sum M_{B}efectivos$\\\vspace{0.2cm}
+%			$-150.07\cdot P_{eso~ABP} +150 Cos(41) \cdot A_{y} + 150Sen(41)\cdot A_{x} = I_{nercia~respecto~B} \cdot \alpha + masa_{ABP} \cdot a_{X} \cdot 3.97 + masa_{ABP} \cdot a_{Y} \cdot 156.07$\\\vspace{0.8cm}
+%			
+%						\newpage
+%			3	CUERPO EA\\\vspace{0.2cm}
+%	$\sum F_{x}$\\\vspace{0.2cm}
+%	$E_{x}+A_{x}=2\cdot masa_{EA} \cdot a_{X}$\\\vspace{0.2cm}
+%	$\sum F_{y}$\\\vspace{0.2cm}
+%	$	E_{y}+A_{y}-P_{eso~AE}=2\cdot masa_{EA
+%	} \cdot a_{y}$ \\\vspace{0.2cm}
+%	$\sum M_{E }=\sum M_{E}efectivos$\\\vspace{0.2cm}
+%	$-100 Cos(-30) \cdot P_{eso~AE}-200Sen(-30)\cdot A_{x}+200 Cos(-30)\cdot A_{y} = 2I_{nercia~respecto~E} \cdot \alpha$\\\vspace{0.8cm}
+%	
+%	CUERPO OB\\\vspace{0.2cm}
+%	$\sum F_{x}$\\\vspace{0.2cm}
+%	$O_{x}+B_{x}=2\cdot masa_{OB} \cdot a_{X}$\\\vspace{0.2cm}
+%	$\sum F_{y}$\\\vspace{0.2cm}
+%	$	O_{y}+B_{y}-P_{eso~OB}=2\cdot masa_{OB
+%	} \cdot a_{y}$ \\\vspace{0.2cm}
+%	$\sum M_{o }=\sum M_{o}efectivos$\\\vspace{0.2cm}
+%	$-Mo+200\cdot B_{x} = 2I_{nercia~respecto~O} \cdot \alpha$\\\vspace{0.8cm}
+%	
+%	CUERPO ABP\\\vspace{0.2cm}
+%	$\sum F_{x}$\\\vspace{0.2cm}
+%	$-A_{x}-B_{x}=masa_{ABP} \cdot a_{X}$\\\vspace{0.2cm}
+%	$\sum F_{y}$\\\vspace{0.2cm}
+%	$	-A_{y}-B_{y}-P_{eso~ABP}= masa_{ABP
+%	} \cdot a_{y}$ \\\vspace{0.2cm}
+%	$\sum M_{B }=\sum M_{B}efectivos$\\\vspace{0.2cm}
+%	$-3.97\cdot P_{eso~ABP} +150 Sen(29) \cdot A_{y} +150 Cos(29)\cdot A_{x} = I_{nercia~respecto~B} \cdot \alpha + masa_{ABP} \cdot a_{X}\cdot 150.17 + masa_{ABP} \cdot a_{Y}\cdot 3.97$\\\vspace{0.8cm}
+%		\end{flushleft}
+%	
+%%		\begin{align}
+%%			\sum F_{x}&\\
+%%			E_{x}+A_{x}=&2\cdot masa_{EA} \cdot a_{X}\\
+%%			\sum F_{y}&\\
+%%				E_{y}+A_{y}-P_{eso~AE}=&2\cdot masa_{EA
+%%			} \cdot a_{y}\\
+%%			\sum M_{E }=&\sum M_{E}efectivos\\
+%%			-100 Cos(45) \cdot P_{eso~AE}-200Sen(45)\cdot A_{x}+200 Cos(45)\cdot A_{y} =& 2I_{nercia~respecto~E} \cdot \alpha			
+%%%			CUERPO OB\\\vspace{0.2cm}
+%%%			\sum F_{x}$\\\vspace{0.2cm}
+%%%			O_{x}+B_{x}=2\cdot masa_{OB} \cdot a_{X}$\\\vspace{0.2cm}
+%%%			\sum F_{y}$\\\vspace{0.2cm}
+%%%				O_{y}+B_{y}-P_{eso~OB}=2\cdot masa_{OB
+%%%			} \cdot a_{y}$ \\\vspace{0.2cm}
+%%%			\sum M_{o }=\sum M_{o}efectivos$\\\vspace{0.2cm}
+%%%			-Mo-100 Cos(30) \cdot P_{eso~OB}-200Sen(30)\cdot B_{x}+200 Cos(45)\cdot B_{y} = 2I_{nercia~respecto~O} \cdot \alpha$\\\vspace{0.8cm}
+%%%			
+%%%			CUERPO ABP\\\vspace{0.2cm}
+%%%			\sum F_{x}$\\\vspace{0.2cm}
+%%%			-A_{x}-B_{x}=masa_{ABP} \cdot a_{X}$\\\vspace{0.2cm}
+%%%			\sum F_{y}$\\\vspace{0.2cm}
+%%%				-A_{y}-B_{y}-P_{eso~ABP}= masa_{ABP
+%%%			} \cdot a_{y}$ \\\vspace{0.2cm}
+%%%			\sum M_{B }=\sum M_{B}efectivos$\\\vspace{0.2cm}
+%%%			-150.07\cdot P_{eso~ABP} +150 Cos(28) \cdot A_{y} + 150Sen(28)\cdot A_{x} = I_{nercia~respecto~B} \cdot \alpha + masa_{ABP} \cdot a_{X} \cdot 3.97 + masa_{ABP} \cdot a_{Y} \cdot 150.07$\\\vspace{0.8cm}
+%%		\end{align}
+%
+%
+%%	\begin{align}
+%%
+%%	E_{x}+A_{x}=&2\cdot masa_{EA} \cdot a_{X}\\
+%%
+%%	E_{y}+A_{y}-P_{eso~AE}=&2\cdot masa_{EA
+%%	} \cdot a_{y}\\
+%%
+%%	-100 Cos(45) \cdot P_{eso~AE}-200Sen(45)\cdot A_{x}+200 Cos(45)\cdot A_{y} =& 2I_{nercia~respecto~E} \cdot \alpha			
+%%	%			CUERPO OB\\\vspace{0.2cm}
+%%	%			\sum F_{x}$\\\vspace{0.2cm}
+%%	%			O_{x}+B_{x}=2\cdot masa_{OB} \cdot a_{X}$\\\vspace{0.2cm}
+%%	%			\sum F_{y}$\\\vspace{0.2cm}
+%%	%				O_{y}+B_{y}-P_{eso~OB}=2\cdot masa_{OB
+%%		%			} \cdot a_{y}$ \\\vspace{0.2cm}
+%%	%			\sum M_{o }=\sum M_{o}efectivos$\\\vspace{0.2cm}
+%%	%			-Mo-100 Cos(30) \cdot P_{eso~OB}-200Sen(30)\cdot B_{x}+200 Cos(45)\cdot B_{y} = 2I_{nercia~respecto~O} \cdot \alpha$\\\vspace{0.8cm}
+%%	%			
+%%	%			CUERPO ABP\\\vspace{0.2cm}
+%%	%			\sum F_{x}$\\\vspace{0.2cm}
+%%	%			-A_{x}-B_{x}=masa_{ABP} \cdot a_{X}$\\\vspace{0.2cm}
+%%	%			\sum F_{y}$\\\vspace{0.2cm}
+%%	%				-A_{y}-B_{y}-P_{eso~ABP}= masa_{ABP
+%%		%			} \cdot a_{y}$ \\\vspace{0.2cm}
+%%	%			\sum M_{B }=\sum M_{B}efectivos$\\\vspace{0.2cm}
+%%	%			-150.07\cdot P_{eso~ABP} +150 Cos(28) \cdot A_{y} + 150Sen(28)\cdot A_{x} = I_{nercia~respecto~B} \cdot \alpha + masa_{ABP} \cdot a_{X} \cdot 3.97 + masa_{ABP} \cdot a_{Y} \cdot 150.07$\\\vspace{0.8cm}
+%%\end{align}
+%	
+%	
+%	1
+%	\begin{center}
+%		\begin{equation*}
+%			\begin{pmatrix*}[r]
+%				E_{x}+A_{x}\\
+%				E_{y}+A_{y}-P_{eso~AE}\\
+%				-100 Cos(45) \cdot P_{eso~AE}-200Sen(45)\cdot A_{x}+200 Cos(45)\cdot A_{y}\\
+%				O_{x}+B_{x}\\
+%				O_{y}+B_{y}-P_{eso~OB}\\
+%				-Mo-100 Cos(30) \cdot P_{eso~OB}-200Sen(30)\cdot B_{x}+200 Cos(45)\cdot B_{y}\\
+%				-A_{x}-B_{x}\\
+%				-A_{y}-B_{y}-P_{eso~ABP}\\
+%				-150.07\cdot P_{eso~ABP} +150 Cos(28) \cdot A_{y} + 150Sen(28)\cdot A_{x}
+%			\end{pmatrix*} 
+% 				=
+%			\begin{pmatrix*}[l]
+%				2\cdot masa_{EA} \cdot a_{X}\\
+%				2\cdot masa_{EA} \cdot a_{y}\\				
+%				2I_{nercia~respecto~E} \cdot \alpha\\
+%				2\cdot masa_{OB} \cdot a_{X}\\
+%				2\cdot masa_{OB} \cdot a_{y}\\
+%				2I_{nercia~respecto~O} \cdot \alpha\\
+%				masa_{ABP} \cdot a_{X}\\
+%				masa_{ABP} \cdot a_{y}\\
+%				I_{nercia~respecto~B} \cdot \alpha + masa_{ABP} \cdot a_{X} \cdot 3.97 + masa_{ABP} \cdot a_{Y} \cdot 150.07
+%			\end{pmatrix*} 
+%		\end{equation*}
+%	\end{center}
+%2
+%	\begin{center}
+%	\begin{equation*}
+%		\begin{pmatrix*}[r]
+%			E_{x}+A_{x}\\
+%			E_{y}+A_{y}-P_{eso~AE}\\
+%			-100 Cos(20) \cdot P_{eso~AE}-200Sen(20)\cdot A_{x}+200 Cos(20)\cdot A_{y}\\ 
+%			O_{x}+B_{x}\\
+%			O_{y}+B_{y}-P_{eso~OB}\\
+%			-Mo-100 Cos(30) \cdot P_{eso~OB}+200\cdot B_{y}\\
+%			-A_{x}-B_{x}\\
+%			-A_{y}-B_{y}-P_{eso~ABP}\\
+%			-150.07\cdot P_{eso~ABP} +150 Cos(41) \cdot A_{y} + 150Sen(41)\cdot A_{x}
+%		\end{pmatrix*} 
+%		=
+%		\begin{pmatrix*}[l]
+%			2\cdot masa_{EA} \cdot a_{X}\\
+%			2\cdot masa_{EA} \cdot a_{y}\\				
+%			2I_{nercia~respecto~E} \cdot \alpha\\
+%			2\cdot masa_{OB} \cdot a_{X}\\
+%			2\cdot masa_{OB} \cdot a_{y}\\
+%			2I_{nercia~respecto~O} \cdot \alpha\\
+%			masa_{ABP} \cdot a_{X}\\
+%			masa_{ABP} \cdot a_{y}\\
+%			I_{nercia~respecto~B} \cdot \alpha + masa_{ABP} \cdot a_{X} \cdot 3.97 + masa_{ABP} \cdot a_{Y} \cdot 156.07
+%		\end{pmatrix*} 
+%	\end{equation*}
+%\end{center}
+%3
+%	\begin{center}
+%	\begin{equation*}
+%		\begin{pmatrix*}[r]
+%			E_{x}+A_{x}\\
+%			E_{y}+A_{y}-P_{eso~AE}\\
+%			-100 Cos(-30) \cdot P_{eso~AE}-200Sen(-30)\cdot A_{x}+200 Cos(-30)\cdot A_{y} \\ 
+%			O_{x}+B_{x}\\
+%			O_{y}+B_{y}-P_{eso~OB}\\
+%			-Mo+200\cdot B_{x}\\
+%			-A_{x}-B_{x}\\
+%			-A_{y}-B_{y}-P_{eso~ABP}\\
+%			-3.97\cdot P_{eso~ABP} +150 Sen(29) \cdot A_{y} +150 Cos(29)\cdot A_{x}
+%		\end{pmatrix*}   =
+%		\begin{pmatrix*}[l]
+%			2\cdot masa_{EA} \cdot a_{X}\\
+%			2\cdot masa_{EA} \cdot a_{y}\\				
+%			2I_{nercia~respecto~E} \cdot \alpha\\
+%			2\cdot masa_{OB} \cdot a_{X}\\
+%			2\cdot masa_{OB} \cdot a_{y}\\
+%			2I_{nercia~respecto~O} \cdot \alpha\\
+%			masa_{ABP} \cdot a_{X}\\
+%			masa_{ABP} \cdot a_{y}\\
+%			I_{nercia~respecto~B} \cdot \alpha + masa_{ABP} \cdot a_{X}\cdot 150.17 + masa_{ABP} \cdot a_{Y}\cdot 3.97
+%		\end{pmatrix*} 
+%	\end{equation*}
+%\end{center}
+%$T = \frac{1}{2}~m~v^{2}+\frac{1}{2}~I~\omega^{2}$\\\vspace{0.8cm}
+%
+%$T_{sistema}=~2~T_{\text{rueda dentada chica}}+~T_{\text{rueda dentada grande}}+~T_{\text{rueda dentada tensora}}~+T_{\text{plataforma}}+~T_{\text{motor}}$
+%\end{landscape}
+%
+%\newpage
+%
+%
+%
+%$V_{s}= i_{t} ~ R~ + ~L  \dfrac{di}{dt}~+~$
+%	
+%\begin{tabular}{r l}\vspace{.2cm}	
+%	Raíces & $s_{1-2}=-\alpha\pm \sqrt{\alpha^{2}-\omega_{0}^{2}}$\\
+%	Frecuencia angular & $\omega = 2 \pi f = 2 \pi \dfrac{1}{\tau} $\vspace{.2cm}\\ 
+%	
+%	\multicolumn{2}{l}{Circuito RLC \textsl{en serie} (\textbf{LTK})}\vspace{.4cm} \\
+%	\multicolumn{2}{c}{$iR+L\dfrac{di}{dt}+\dfrac{1}{C}\displaystyle\int_{-\infty}^{t}idt=0 $} \vspace{.4cm} \\ 
+%	\multicolumn{2}{c}{$\dfrac{di}{dt}R+L\dfrac{d^2i}{dt^2}+\dfrac{i}{C}=0 $} \vspace{.8cm} \\ 
+%
+%	
+%
+%	
+%	
+%	\multicolumn{2}{l}{Circuito RLC \textsl{en paralelo} (\textbf{LCK})}\vspace{.4cm} \\
+%	
+%	\multicolumn{2}{c}{$\dfrac{v}{R}+\dfrac{1}{L}\displaystyle\int_{-\infty}^{t}v dt+C\dfrac{dv}{dt}=0 $} \vspace{.4cm} \\ 
+%	
+%	\multicolumn{2}{c}{$\dfrac{1}{R}\dfrac{dv}{dt}+\dfrac{1}{L} v +C\dfrac{d^2 v}{dt^2}=0 $} \vspace{.8cm} \\ 
+%	
+%
+%
+%
+%\end{tabular}\\
+%
+%
+%\begin{align*}
+%	  R.\mathcal{L}\{i'(t)\} +L.\displaystyle\mathcal{L}\{i''(t)\}+\dfrac{1}{C}\mathcal{L}\{i(t)\}=&0\\
+%	  R(s.F(s)-f(0)) +L	(s^{2}.F(s)-s.f(0)-f'(0))+\dfrac{1}{C}.F(s)=&0\\ 
+%	  F(s).\left(L.s^{2}+R.s+\dfrac{1}{C}\right)-f'(0).L-f(0).(R+Ls)=&0\\ 
+%	F(s)=&\dfrac{f'(0).L+f(0).(R+Ls)}{\left(L.s^{2}+R.s+\dfrac{1}{C}\right)}\\	
+%	F(s)=&\dfrac{A.s+B}{\left(D.s^{2}+E.s+G\right)}\\
+%	F(s)=&\dfrac{A.s}{\left(D.s^{2}+E.s+G\right)}+\dfrac{B}{\left(D.s^{2}+E.s+G\right)}\\
+%\end{align*}
+%
+%\begin{align*}
+%	\dfrac{1}{R}\mathcal{L}\{v'(t)\}+\dfrac{1}{L} \mathcal{L}\{v(t)\} +C\mathcal{L}\{v''(t)\}=&0\\
+%	\dfrac{1}{R}(s.F(s)-f(0))+\dfrac{1}{L} .F(s)+C	(s^{2}.F(s)-s.f(0)-f'(0))=&0\\
+%	%
+%	F(s).\left(\dfrac{s}{R}+\dfrac{1}{L}+C.s^{2}\right)-\dfrac{f(0)}{R}-s.C.f(0)-f'(0).C=&0\\ 
+%	F(s)=&\dfrac{f(0)\left(\dfrac{1}{R}+s.C\right)+f'(0).C}{\left(\dfrac{s}{R}+\dfrac{1}{L}+C.s^{2}\right)}\\	
+%	F(s)=&\dfrac{A.s+B}{\left(D.s^{2}+E.s+G\right)}\\
+%	F(s)=&\dfrac{A.s}{\left(D.s^{2}+E.s+G\right)}+\dfrac{B}{\left(D.s^{2}+E.s+G\right)}\\
+%\end{align*}
+%
+%$ V_{completa}=V_{s}+f(t)$
+%
+%
+%$ I_{completa}=I_{forzada}+f(t)$
+EJ8\\
+a- $233/9$\\
+b- $17/4$\\
+c- $383/90$\\
+d- $2743/900$\\
+e- $151/990$\\
+f- $123031/99900$\\
+EJ9\\
+a- $29/3$\\
+b- $83/12$\\
+c- $ -31/15$\\
+d- $1/10$\\
+e- $2/9$\\
+f- $54/35$\\
+g- $-1$\\
+h- $ 81/256$\\
+i- $-4 $\\
+j- $ -36$\\
+k- $5/3$\\
+l- $53/9$\\
+m- $-215/24$\\
+n- $15$\\
+o- $323/9$\\
+EJ10\\
+a- 1\\
+b- $7/5$\\
+c- $2/3$\\
+d- $10/27$\\
+e- $191/13$\\
+
+EJ11\\
+a- $2a$\\
+b- $\dfrac{-5}{x^{2}-x} $\\
+c- $\dfrac{6xy^{2}+20x^{2}y-5xy}{10x^{2}y^{2}} $\\
+d- $\dfrac{a^{2}+b^{2}}{a^{2}-b^{2}} $\\\
+
+EJ12\\
+a- Emprendió el viaje con 50lts\\
+b- $\dfrac{3}{7}$\\
+c- 45\\
+d- ¿?\\
+EJ13\\
+a- n=-7\\
+b- n=16\\
+
+
+EJ14\\
+a- exponentes 3 y -7\\
+b- exponentes -5 y -2\\
+EJ15\\
+a-	$7\sqrt{2}$ \\
+b- $3\sqrt{2}-10\sqrt{5}$\\
+c- $-\sqrt{5}$\\
+d- $7.\sqrt[3]{2}$\\
+e-$ \sqrt[6]{2^{11}}$\\
+f- $\sqrt{3}.(9-2.\sqrt{2})$\\
+g-$1-\sqrt{2}$\\
+h- $ 4$\\
+i- $13/3 $\\
+EJ16\\
+a-	$\sqrt{2}+ 1$ \\
+b- $\sqrt{5} $ \\
+c- $ 2\sqrt{x}$ \\
+d- $\dfrac{2}{3}\sqrt{2} $ \\
+e-$\dfrac{1}{5}\sqrt{10} $ \\
+f- $ \dfrac{5+15\sqrt{2}}{17}$ \\
+EJ17\\
+perímetro=$2+6\sqrt{2}$ y área= $\sqrt{8}+4$\\
+EJ18\\
+a-	$4\times10^{2}$\\
+b-	$1/10$\\
+c-	$1/20$\\
+EJ19\\
+a-	$Log_{4}(x)+log_{4}(z)$\\
+b-	$Log(y)-Log(x)$\\
+c-	$5log(y)+2Log(w)-4log(x)-3log(z)$\\
+d-	$¼(7Ln(x)-5Ln(y)-Ln(z))$\\
+EJ20 ¿?\\
+EJ21\\
+a-	$Ln(6x)$\\
+b-	$Ln(5/x)$\\
+c-	$Log3(m.x^{2})$\\
+d-	$Log5(25x)$\\
+e-	$Log2(\dfrac{(r.x^{2/3})}{y})$\\
+f-	$Log2(\dfrac{\sqrt{y}}{x.z})$\\
+
+
+\end{document}
+
+
