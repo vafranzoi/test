@@ -222,32 +222,32 @@
 %	\end{equation*}
 %\end{center}
 %3
-%	\begin{center}
-%	\begin{equation*}
-%		\begin{pmatrix*}[r]
-%			E_{x}+A_{x}\\
-%			E_{y}+A_{y}-P_{eso~AE}\\
-%			-100 Cos(-30) \cdot P_{eso~AE}-200Sen(-30)\cdot A_{x}+200 Cos(-30)\cdot A_{y} \\ 
-%			O_{x}+B_{x}\\
-%			O_{y}+B_{y}-P_{eso~OB}\\
-%			-Mo+200\cdot B_{x}\\
-%			-A_{x}-B_{x}\\
-%			-A_{y}-B_{y}-P_{eso~ABP}\\
-%			-3.97\cdot P_{eso~ABP} +150 Sen(29) \cdot A_{y} +150 Cos(29)\cdot A_{x}
-%		\end{pmatrix*}   =
-%		\begin{pmatrix*}[l]
-%			2\cdot masa_{EA} \cdot a_{X}\\
-%			2\cdot masa_{EA} \cdot a_{y}\\				
-%			2I_{nercia~respecto~E} \cdot \alpha\\
-%			2\cdot masa_{OB} \cdot a_{X}\\
-%			2\cdot masa_{OB} \cdot a_{y}\\
-%			2I_{nercia~respecto~O} \cdot \alpha\\
-%			masa_{ABP} \cdot a_{X}\\
-%			masa_{ABP} \cdot a_{y}\\
-%			I_{nercia~respecto~B} \cdot \alpha + masa_{ABP} \cdot a_{X}\cdot 150.17 + masa_{ABP} \cdot a_{Y}\cdot 3.97
-%		\end{pmatrix*} 
-%	\end{equation*}
-%\end{center}
+	\begin{center}
+	\begin{equation*}
+		\begin{pmatrix*}[r]
+			E_{x}+A_{x}\\
+			E_{y}+A_{y}-P_{eso~AE}\\
+			-100 Cos(-30) \cdot P_{eso~AE}-200Sen(-30)\cdot A_{x}+200 Cos(-30)\cdot A_{y} \\ 
+			O_{x}+B_{x}\\
+			O_{y}+B_{y}-P_{eso~OB}\\
+			-Mo+200\cdot B_{x}\\
+			-A_{x}-B_{x}\\
+			-A_{y}-B_{y}-P_{eso~ABP}\\
+			-3.97\cdot P_{eso~ABP} +150 Sen(29) \cdot A_{y} +150 Cos(29)\cdot A_{x}
+		\end{pmatrix*}   =
+		\begin{pmatrix*}[l]
+			2\cdot masa_{EA} \cdot a_{X}\\
+			2\cdot masa_{EA} \cdot a_{y}\\				
+			2I_{nercia~respecto~E} \cdot \alpha\\
+			2\cdot masa_{OB} \cdot a_{X}\\
+			2\cdot masa_{OB} \cdot a_{y}\\
+			2I_{nercia~respecto~O} \cdot \alpha\\
+			masa_{ABP} \cdot a_{X}\\
+			masa_{ABP} \cdot a_{y}\\
+			I_{nercia~respecto~B} \cdot \alpha + masa_{ABP} \cdot a_{X}\cdot 150.17 + masa_{ABP} \cdot a_{Y}\cdot 3.97
+		\end{pmatrix*} 
+	\end{equation*}
+\end{center}
 %$T = \frac{1}{2}~m~v^{2}+\frac{1}{2}~I~\omega^{2}$\\\vspace{0.8cm}
 %
 %$T_{sistema}=~2~T_{\text{rueda dentada chica}}+~T_{\text{rueda dentada grande}}+~T_{\text{rueda dentada tensora}}~+T_{\text{plataforma}}+~T_{\text{motor}}$
@@ -283,24 +283,24 @@
 %\end{tabular}\\
 %
 %
-\begin{align*}
-	  R.\mathcal{L}\{i'(t)\} +L.\displaystyle\mathcal{L}\{i''(t)\}+\dfrac{1}{C}\mathcal{L}\{i(t)\}=&0\\
-	  R(s.F(s)-f(0)) +L	(s^{2}.F(s)-s.f(0)-f'(0))+\dfrac{1}{C}.F(s)=&0\\ 
-	  F(s).\left(L.s^{2}+R.s+\dfrac{1}{C}\right)-f'(0).L-f(0).(R+Ls)=&0\\ 
-	F(s)=&\dfrac{f'(0).L+f(0).(R+Ls)}{\left(L.s^{2}+R.s+\dfrac{1}{C}\right)}\\	
-	F(s)=&\dfrac{A.s+B}{\left(D.s^{2}+E.s+G\right)}\\
-	F(s)=&\dfrac{A.s}{\left(D.s^{2}+E.s+G\right)}+\dfrac{B}{\left(D.s^{2}+E.s+G\right)}\\
-\end{align*}
+% \begin{align*}
+% 	  R.\mathcal{L}\{i'(t)\} +L.\displaystyle\mathcal{L}\{i''(t)\}+\dfrac{1}{C}\mathcal{L}\{i(t)\}=&0\\
+% 	  R(s.F(s)-f(0)) +L	(s^{2}.F(s)-s.f(0)-f'(0))+\dfrac{1}{C}.F(s)=&0\\ 
+% 	  F(s).\left(L.s^{2}+R.s+\dfrac{1}{C}\right)-f'(0).L-f(0).(R+Ls)=&0\\ 
+% 	F(s)=&\dfrac{f'(0).L+f(0).(R+Ls)}{\left(L.s^{2}+R.s+\dfrac{1}{C}\right)}\\	
+% 	F(s)=&\dfrac{A.s+B}{\left(D.s^{2}+E.s+G\right)}\\
+% 	F(s)=&\dfrac{A.s}{\left(D.s^{2}+E.s+G\right)}+\dfrac{B}{\left(D.s^{2}+E.s+G\right)}\\
+% \end{align*}
 
-\begin{align*}
-	\dfrac{1}{R}\mathcal{L}\{v'(t)\}+\dfrac{1}{L} \mathcal{L}\{v(t)\} +C\mathcal{L}\{v''(t)\}=&0\\
-	\dfrac{1}{R}(s.F(s)-f(0))+\dfrac{1}{L} .F(s)+C	(s^{2}.F(s)-s.f(0)-f'(0))=&0\\
-	%
-	F(s).\left(\dfrac{s}{R}+\dfrac{1}{L}+C.s^{2}\right)-\dfrac{f(0)}{R}-s.C.f(0)-f'(0).C=&0\\ 
-	F(s)=&\dfrac{f(0)\left(\dfrac{1}{R}+s.C\right)+f'(0).C}{\left(\dfrac{s}{R}+\dfrac{1}{L}+C.s^{2}\right)}\\	
-	F(s)=&\dfrac{A.s+B}{\left(D.s^{2}+E.s+G\right)}\\
-	F(s)=&\dfrac{A.s}{\left(D.s^{2}+E.s+G\right)}+\dfrac{B}{\left(D.s^{2}+E.s+G\right)}\\
-\end{align*}
+% \begin{align*}
+% 	\dfrac{1}{R}\mathcal{L}\{v'(t)\}+\dfrac{1}{L} \mathcal{L}\{v(t)\} +C\mathcal{L}\{v''(t)\}=&0\\
+% 	\dfrac{1}{R}(s.F(s)-f(0))+\dfrac{1}{L} .F(s)+C	(s^{2}.F(s)-s.f(0)-f'(0))=&0\\
+% 	%
+% 	F(s).\left(\dfrac{s}{R}+\dfrac{1}{L}+C.s^{2}\right)-\dfrac{f(0)}{R}-s.C.f(0)-f'(0).C=&0\\ 
+% 	F(s)=&\dfrac{f(0)\left(\dfrac{1}{R}+s.C\right)+f'(0).C}{\left(\dfrac{s}{R}+\dfrac{1}{L}+C.s^{2}\right)}\\	
+% 	F(s)=&\dfrac{A.s+B}{\left(D.s^{2}+E.s+G\right)}\\
+% 	F(s)=&\dfrac{A.s}{\left(D.s^{2}+E.s+G\right)}+\dfrac{B}{\left(D.s^{2}+E.s+G\right)}\\
+% \end{align*}
 %
 %$ V_{completa}=V_{s}+f(t)$
 %
